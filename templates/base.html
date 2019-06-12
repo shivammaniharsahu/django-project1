@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="english">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Base
+    </title>
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+
+</head>
+<body>
+        <nav class="navbar navbar-default navbar -static-top">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{% url 'basic_app:list' %}">School</a></li>
+                <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+                <li><a href="#"></a></li>
+
+            </ul>
+        </nav>
+            <div class="container">
+            {% block body_block %}
+            {% endblock %}
+            </div>
+</body>
